@@ -1,0 +1,48 @@
+server:
+  port: 8000
+  error:
+    whitelabel:
+      enabled: false
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+
+  datasource:
+    platform: mysql
+    schema: classpath:mysqlSchema.sql
+    data: classpath:mySqlData.sql
+    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/cloud?useTimezone=true&amp;serverTimezone=UTC
+    username: root
+    password: marvin
+    hikari:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/cloud
+      username: root
+      password: marvin
+      connection-timeout: 30000
+      maximum-pool-size: 50
+      idle-timeout: 60000
+      connection-test-query: SELECT 1
+      schema: cloud
+
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
