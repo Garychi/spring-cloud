@@ -7,3 +7,19 @@ info:
     java:
       source: @java.version@
       target: @java.version@
+
+spring:
+  application:
+    name: microservice-consumer-movie
+  cloud:
+    service-registry:
+      auto-registration:
+        enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
