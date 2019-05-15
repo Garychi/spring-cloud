@@ -1,6 +1,6 @@
-server:
-  port: 8761
-
+#server:
+#  port: 8761
+#
 
 eureka:
   client:
@@ -28,7 +28,7 @@ eureka:
     hostname: peer1
   client:
     serviceUrl:
-      defaultZone: http://peer1:8762/eureka/
+      defaultZone: http://peer2:8762/eureka/
 
 ---
 
@@ -43,4 +43,4 @@ eureka:
     hostname: peer2
   client:
     serviceUrl:
-      defaultZone: http://peer2:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
