@@ -17,10 +17,10 @@ public interface UserApi {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation", response = User.class),
             @ApiResponse(code = 400, message = "Invalid ID supplied"),
-            @ApiResponse(code = 404, message = "Pet not found") })
+            @ApiResponse(code = 404, message = "User not found") })
     @RequestMapping(value = "/user/{id}",
             produces = { "application/xml", "application/json" },
             method = RequestMethod.GET)
-    ResponseEntity<User> getUserById(@ApiParam(value = "ID of pet to return",required=true) @PathVariable("id") Long id);
+    ResponseEntity<User> getUserById(@ApiParam(value = "ID of User to return",required=true) @PathVariable("id") Long id);
 
 }
