@@ -1,3 +1,15 @@
+#spring:
+#  profiles: provider01
+#server:
+#  port: 8001
+#---
+#server:
+#  port: 8002
+#spring:
+#  profiles: provider02
+#
+#---
+
 server:
   port: 8000
   error:

@@ -3,6 +3,7 @@ package com.it;
 import com.model.User;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,8 +20,7 @@ public interface UserApi {
             @ApiResponse(code = 400, message = "Invalid ID supplied"),
             @ApiResponse(code = 404, message = "User not found") })
     @RequestMapping(value = "/user/{id}",
-            produces = { "application/xml", "application/json" },
-            method = RequestMethod.GET)
-    ResponseEntity<User> getUserById(@ApiParam(value = "ID of User to return",required=true) @PathVariable("id") Long id);
+            produces = { "application/xml", "application/json" },method = RequestMethod.GET)
+    ResponseEntity<User> findById(@ApiParam(value = "ID of User to return",required=true) @PathVariable("id") Long id);
 
 }

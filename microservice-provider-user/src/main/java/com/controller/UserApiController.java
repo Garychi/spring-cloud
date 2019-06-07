@@ -31,7 +31,7 @@ public class UserApiController implements UserApi {
         this.request = request;
     }
 
-    public ResponseEntity<User> getUserById(@ApiParam(value = "ID of user to return",required=true) @PathVariable("id") Long id) {
+    public ResponseEntity<User> findById(@ApiParam(value = "ID of user to return",required=true) @PathVariable("id") Long id) {
         String accept = request.getHeader("Accept");
         User user = null;
         try {

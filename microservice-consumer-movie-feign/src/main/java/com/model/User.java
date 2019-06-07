@@ -1,27 +1,25 @@
 package com.model;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigDecimal;
 
-@Entity
 public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty
     private Long id;
 
-    @Column(name="user_name")
+    @JsonProperty
     private String userName;
 
-    @Column
+    @JsonProperty
     private String name;
 
-    @Column
+    @JsonProperty
     private Integer age;
 
-    @Column
+    @JsonProperty
     private BigDecimal balance;
-
 
     public Long getId() {
         return id;
