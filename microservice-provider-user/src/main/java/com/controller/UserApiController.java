@@ -36,8 +36,6 @@ public class UserApiController implements UserApi {
         User user = null;
         try {
             log.info("server in");
-
-            List<User> list = this.userRepository.findAll();
             user = this.userRepository.findById(id).orElse(null);
         } catch (Exception e) {
             log.error("FAIL", e);

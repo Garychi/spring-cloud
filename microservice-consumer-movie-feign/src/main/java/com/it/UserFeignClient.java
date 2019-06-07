@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @FeignClient(name="microservice-provider-user",decode404 = true,configuration = FeignConfig.class)
 public interface UserFeignClient {
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/user/{id}")
     public ResponseEntity<User> findById(@PathVariable("id") Long id);
 }

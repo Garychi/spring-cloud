@@ -20,7 +20,7 @@ public interface UserApi {
             @ApiResponse(code = 400, message = "Invalid ID supplied"),
             @ApiResponse(code = 404, message = "User not found") })
     @RequestMapping(value = "/user/{id}",
-            produces = { "application/xml", "application/json" },method = RequestMethod.GET)
+            produces = {"application/json" },method = RequestMethod.GET)
     ResponseEntity<User> findById(@ApiParam(value = "ID of User to return",required=true) @PathVariable("id") Long id);
 
 }
