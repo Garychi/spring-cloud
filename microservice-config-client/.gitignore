@@ -27,11 +27,5 @@ HELP.md
 
 ### VS Code ###
 .vscode/
-microservice-config-server/.mvn/wrapper/maven-wrapper.jar
-*.jar
-microservice-config-server/.mvn/wrapper/maven-wrapper.properties
-microservice-config-server/mvnw
-*.cmd
-microservice-config-client/mvnw
-*.jar
-microservice-config-client/.mvn/wrapper/maven-wrapper.jar
+
+/.mvn
